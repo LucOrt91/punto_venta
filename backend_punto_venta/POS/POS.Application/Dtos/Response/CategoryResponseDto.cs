@@ -1,6 +1,6 @@
 ﻿namespace POS.Application.Dtos.Response
 {
-    public class CategoyResponseDto
+    public class CategoryResponseDto
     {
         public int CategoryId { get; set; }
         public string? Name { get; set; }

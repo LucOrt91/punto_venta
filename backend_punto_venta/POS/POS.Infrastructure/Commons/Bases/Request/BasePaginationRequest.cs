@@ -9,9 +9,9 @@
         public string Order { get; set; } = "asc";
         public string? Sort { get; set; } = null;
 
-        public int Recods
+        public int Records
         {
-            get => NumMaxRecords;
+            get => NumRecordsPage;
             set
             {
                 NumRecordsPage = value > NumMaxRecords ? NumMaxRecords : value;

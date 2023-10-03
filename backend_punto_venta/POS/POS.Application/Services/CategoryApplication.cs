@@ -119,7 +119,7 @@ namespace POS.Application.Services
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
             }
             var category = _mapper.Map<Category>(requestDto);
-            category.CategoryId = categoryId;
+            category.Id = categoryId;
             response.Data = await _unitOfWork.Category.EditCategory(category);
 
             if (response.Data)

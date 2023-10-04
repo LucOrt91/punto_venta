@@ -7,7 +7,9 @@ import { CategoryService } from "src/app/services/category.service";
 import { ComponentSettings } from "./category-list.config";
 import { CategoryApi } from "src/app/responses/category/category.response";
 import { DatesFilters } from "@shared/functions/actions";
-import { MatDialog } from "@angular/material/dialog";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { CategoryManageComponent } from "../category-manage/category-manage.component";
+import Swal from "sweetalert2";
 
 @Component({
   selector: "vex-category-list",
@@ -27,21 +29,6 @@ export class CategoryListComponent implements OnInit {
 
   ngOnInit(): void {
     this.component = ComponentSettings;
-  }
-
-  rowClick(e: any) {
-    let action = e.action;
-    let category = e.row;
-
-    switch (action) {
-      case "edit":
-        this.CategoryEdit(category);
-        break;
-      case "remove":
-        this.CategoryRemove(category);
-        break;
-    }
-    return false;
   }
 
   setData(data: any = null) {
@@ -87,7 +74,65 @@ export class CategoryListComponent implements OnInit {
     this.component.getInputs = inputs;
   }
 
-  CategoryEdit(row: CategoryApi) {}
+  openDialogRegister() {
+    this._dialog
+      .open(CategoryManageComponent, {
+        disableClose: true,
+        width: "400px",
+      })
+      .afterClosed()
+      .subscribe((res) => {
+        this.formatGetInputs();
+      });
+  }
+  rowClick(e: any) {
+    let action = e.action;
+    let category = e.row;
 
-  CategoryRemove(category: any) {}
+    switch (action) {
+      case "edit":
+        this.CategoryEdit(category);
+        break;
+      case "remove":
+        this.CategoryRemove(category);
+        break;
+    }
+    return false;
+  }
+  CategoryEdit(row: CategoryApi) {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.data = row;
+
+    let dialogRef = this._dialog.open(CategoryManageComponent, {
+      data: dialogConfig,
+      disableClose: true,
+      width: "400px",
+    });
+    dialogRef.afterClosed().subscribe((res) => {
+      if (res) {
+        this.formatGetInputs();
+      }
+    });
+  }
+
+  CategoryRemove(category: any) {
+    Swal.fire({
+      title: `¿Realmente deseas eliminar la categoria ${category.name}?`,
+      text: "Se borrara de forma permantente!",
+      icon: "warning",
+      showCancelButton: true,
+      focusCancel: true,
+      confirmButtonColor: "rgb(210,155,253)",
+      cancelButtonColor: "rgb(79,109,253)",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Si, Eliminar",
+      width: "430px",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this._categoryService
+          .CategoryRemove(category.categoryId)
+          .subscribe(() => this.formatGetInputs());
+      }
+    });
+  }
 }

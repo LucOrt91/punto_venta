@@ -17,7 +17,7 @@ export class AlertService {
     });
   }
 
-  warm(title: string, message: string) {
+  warn(title: string, message: string) {
     Swal.fire({
       title: title,
       text: message,

@@ -40,6 +40,9 @@
         <vex-list-table-menu
           class="hidden sm:block mr-6"
           [currentCategory]="component.getInputs.stateFilter"
+          buttonShow="true"
+          buttonLabel="AGREGAR"
+          (buttonClick)="openDialogRegister()"
           (filterChange)="setData($event)"
           [items]="component.menuItems"
         ></vex-list-table-menu>

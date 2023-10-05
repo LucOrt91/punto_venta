@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using POS.Application.Commons.Bases;
-using POS.Application.Dtos.Request;
-using POS.Application.Dtos.Response;
+using POS.Application.Dtos.Category.Request;
+using POS.Application.Dtos.Category.Response;
 using POS.Application.Interfaces;
 using POS.Application.Validators.Category;
 using POS.Domain.Entities;
@@ -31,13 +31,13 @@ namespace POS.Application.Services
 
             if (categories is not null)
             {
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Data = _mapper.Map<BaseEntityResponse<CategoryResponseDto>>(categories);
                 response.Message = ReplyMessage.MESSAGE_QUERY;
             }
             else
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
             }
             return response;
@@ -49,13 +49,13 @@ namespace POS.Application.Services
 
             if (categories is not null)
             {
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Data = _mapper.Map<IEnumerable<CategorySelectResponseDto>>(categories);
                 response.Message = ReplyMessage.MESSAGE_QUERY;
             }
             else
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
             }
             return response;
@@ -69,13 +69,13 @@ namespace POS.Application.Services
 
             if (category is not null)
             {
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Data = _mapper.Map<CategoryResponseDto>(category);
                 response.Message = ReplyMessage.MESSAGE_QUERY;
             }
             else
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
             }
             return response;
@@ -87,7 +87,7 @@ namespace POS.Application.Services
 
             if (!validatioResult.IsValid)
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_VALIDATE;
                 response.Errors = validatioResult.Errors;
                 return response;
@@ -97,12 +97,12 @@ namespace POS.Application.Services
 
             if (response.Data)
             {
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_SAVE;
             }
             else
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_FAILED;
             }
             return response;
@@ -115,7 +115,7 @@ namespace POS.Application.Services
 
             if (categoryEdit.Data is null)
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
             }
             var category = _mapper.Map<Category>(requestDto);
@@ -124,12 +124,12 @@ namespace POS.Application.Services
 
             if (response.Data)
             {
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_UPDATE;
             }
             else
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_FAILED;
             }
             return response;
@@ -142,19 +142,19 @@ namespace POS.Application.Services
 
             if(category.Data is null)
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
             }
             response.Data = await _unitOfWork.Category.RemoveAsync(categoryId);
 
             if (response.Data)
             {
-                response.IsSucces = true;
+                response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_DELETE;
             }
             else
             {
-                response.IsSucces = false;
+                response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_FAILED;
             }
             return response;

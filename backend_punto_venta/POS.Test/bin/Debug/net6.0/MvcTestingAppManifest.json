@@ -1,7 +1,7 @@
 {
-  "POS.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS\\POS.Api",
-  "POS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS\\POS.Application",
-  "POS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS\\POS.Domain",
-  "POS.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS\\POS.Infrastructure",
-  "POS.Utilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS\\POS.Utilities"
+  "POS.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS.Api",
+  "POS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS.Application",
+  "POS.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS.Domain",
+  "POS.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS.Infrastructure",
+  "POS.Utilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS.Utilities"
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M8kl2jfMLFXJxK+jY3onmZ3Qfs6QYB8TLFuTuAyn9df3B/kNy+sFrbQXkCs3d+4DvDt6+RrunWlRqhhs+kMzBw==",
+  "dgSpecHash": "nYtD31esxyS3jSEZQsfdPkRqq3rJIOZGSAlZ1DjFO3wF8B1F0XfK0eN5Z0hJg9Syz8k2Q8+8irToBQSLItjXog==",
   "success": true,
   "projectFilePath": "D:\\Proyectos\\punto_venta\\backend_punto_venta\\POS.Application\\POS.Application.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\lucas\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\azure.storage.blobs\\12.18.0\\azure.storage.blobs.12.18.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\azure.storage.common\\12.17.0\\azure.storage.common.12.17.0.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",

@@ -55,8 +55,12 @@ namespace POS.Application.Services
         {
             var response = new BaseResponse<bool>();
             var account = _mapper.Map<User>(requestDto);
-
             account.Password = BC.HashPassword(account.Password);
+
+            if(requestDto.Image is not null)
+            {
+                account.Image = await _unitOfWork.Storage.SaveFile(AzureContainers.USER, requestDto.Image);
+            }
 
             response.Data = await _unitOfWork.User.RegisterAsync(account);
 

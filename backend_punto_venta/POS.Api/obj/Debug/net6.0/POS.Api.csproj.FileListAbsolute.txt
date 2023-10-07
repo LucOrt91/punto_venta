@@ -98,10 +98,12 @@ D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\AutoMapper
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Azure.Core.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Azure.Storage.Blobs.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Azure.Storage.Common.dll
+D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\BCrypt.Net-Next.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\FluentValidation.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Humanizer.dll
+D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -158,6 +160,7 @@ D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.Ge
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.AssemblyInfoInputs.cache
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.AssemblyInfo.cs
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.csproj.CoreCompileInputs.cache
+D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\staticwebassets\msbuild.POS.Api.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\staticwebassets\msbuild.build.POS.Api.props
@@ -173,6 +176,3 @@ D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\refint\POS
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.pdb
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.genruntimeconfig.cache
 D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\ref\POS.Api.dll
-D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\obj\Debug\net6.0\POS.Api.MvcApplicationPartsAssemblyInfo.cs
-D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\BCrypt.Net-Next.dll
-D:\Proyectos\punto_venta\backend_punto_venta\POS.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

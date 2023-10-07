@@ -4,11 +4,6 @@ using POS.Application.Dtos.Category.Response;
 using POS.Domain.Entities;
 using POS.Infrastructure.Commons.Bases.Response;
 using POS.Utilities.Static;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace POS.Application.Mappers
 {

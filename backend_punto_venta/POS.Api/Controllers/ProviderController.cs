@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using POS.Application.Dtos.Category.Request;
+using POS.Application.Dtos.Provider.Request;
 using POS.Application.Interfaces;
+using POS.Application.Services;
 using POS.Infrastructure.Commons.Bases.Request;
 
 namespace POS.Api.Controllers
@@ -24,6 +26,32 @@ namespace POS.Api.Controllers
             return Ok(response);
         }
 
+        [HttpGet("{providerId:int}")]
+        public async Task<IActionResult> ProviderById(int providerId)
+        {
+            var response = await _providerApplication.ProviderById(providerId);
+
+            return Ok(response);
+        }
+        [HttpPost("Register")]
+        public async Task<IActionResult> RegisterProvider([FromBody] ProviderRequestDto requestDto)
+        {
+            var response = await _providerApplication.RegisterProvider(requestDto);
+
+            return Ok(response);
+        }
+        [HttpPut("Edit/{providerId:int}")]
+        public async Task<IActionResult> EditProvider(int providerId, [FromBody] ProviderRequestDto requestDto)
+        {
+            var response = await _providerApplication.EditProvider(providerId, requestDto);
+            return Ok(response);
+        }
+        [HttpPut("Remove/{providerId:int}")]
+        public async Task<IActionResult> RemoveProvider(int providerId)
+        {
+            var response = await _providerApplication.RemoveProvider(providerId);
+            return Ok(response);
+        }
 
     }
 }

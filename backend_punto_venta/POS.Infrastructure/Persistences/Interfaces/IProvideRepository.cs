@@ -4,7 +4,7 @@ using POS.Infrastructure.Commons.Bases.Response;
 
 namespace POS.Infrastructure.Persistences.Interfaces
 {
-    public interface IProvideRepository
+    public interface IProvideRepository : IGenericRepository<Provider>
     {
         Task<BaseEntityResponse<Provider>> ListProvider (BaseFilterRequest filter);
     }

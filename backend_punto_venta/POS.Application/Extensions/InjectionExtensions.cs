@@ -1,6 +1,7 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using POS.Application.Extensions.WatchDog;
 using POS.Application.Interfaces;
 using POS.Application.Services;
 using POS.Infrastructure.FileStorage;
@@ -25,6 +26,9 @@ namespace POS.Application.Extensions
             service.AddScoped<IUserApplication, UserApplication>();
             service.AddTransient<IAzureStorage, AzureStorage>();
             service.AddScoped<IProviderApplication, ProviderApplication>();
+
+            service.AddWatchDog();
+
             return service;
         }
     }

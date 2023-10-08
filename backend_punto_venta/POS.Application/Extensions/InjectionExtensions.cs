@@ -27,7 +27,7 @@ namespace POS.Application.Extensions
             service.AddTransient<IAzureStorage, AzureStorage>();
             service.AddScoped<IProviderApplication, ProviderApplication>();
 
-            service.AddWatchDog();
+            service.AddWatchDog(configuration);
 
             return service;
         }

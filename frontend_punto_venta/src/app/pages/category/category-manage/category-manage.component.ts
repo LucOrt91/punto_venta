@@ -7,7 +7,7 @@ import { AlertService } from "@shared/services/alert.service";
 import { CategoryService } from "src/app/services/category.service";
 
 @Component({
-  selector: "vex-category-manage",
+  selector: "app-category-manage",
   templateUrl: "./category-manage.component.html",
   styleUrls: ["./category-manage.component.scss"],
 })
@@ -74,7 +74,7 @@ export class CategoryManageComponent implements OnInit {
       .CategoryRegister(this.form.value)
       .subscribe((resp) => {
         console.log(resp);
-        if (resp.isSucces) {
+        if (resp.isSuccess) {
           this._alert.success("Excelente", resp.message);
           this._dialogRef.close(true);
         } else {
@@ -87,7 +87,7 @@ export class CategoryManageComponent implements OnInit {
     this._categoryService
       .CategoryEdit(categoryId, this.form.value)
       .subscribe((resp) => {
-        if (resp.isSucces) {
+        if (resp.isSuccess) {
           this._alert.success("Excelente", resp.message);
           this._dialogRef.close(true);
         } else {

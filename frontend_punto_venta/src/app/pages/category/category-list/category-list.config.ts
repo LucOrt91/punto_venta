@@ -1,4 +1,3 @@
-import { TableColumn } from "src/@vex/interfaces/table-column.interface";
 import { Category } from "src/app/responses/category/category.response";
 import icCategory from "@iconify/icons-ic/twotone-category";
 import { ListTableMenu } from "src/app/commons/list-table-menu.interface";
@@ -6,6 +5,7 @@ import icViewHeadLine from "@iconify/icons-ic/twotone-view-headline";
 import icLabel from "@iconify/icons-ic/twotone-label";
 import icCalendarMonth from "@iconify/icons-ic/twotone-calendar-today";
 import { GenericValidators } from "@shared/validators/generic-validators";
+import { TableColumns } from "src/app/core/interfaces/list-table.interfaces";
 
 const searchOptions = [
   {
@@ -54,50 +54,76 @@ const menuItems: ListTableMenu[] = [
   },
 ];
 
-const tableColumns: TableColumn<Category>[] = [
+const tableColumns: TableColumns<Category>[] = [
   {
-    label: "Nombre",
+    label: "NOMBRE",
+    cssLabel: ["font-bold", "text-sm"],
     property: "name",
+    cssProperty: ["font-semiblod", "text-sm", "text-left"],
     type: "text",
-    cssClasses: ["font-medium", "w-10"],
+    sticky: true,
+    sort: true,
+    sortProperty: "name",
+    visible: true,
+    download: true,
   },
   {
-    label: "Descripción",
+    label: "DESCRIPCION",
+    cssLabel: ["font-bold", "text-sm"],
     property: "description",
-    type: "textTruncate",
-    cssClasses: ["font-medium", "w-10"],
+    cssProperty: ["font-semiblod", "text-sm", "text-left"],
+    type: "text",
+    sticky: false,
+    sort: true,
+    sortProperty: "description",
+    visible: true,
+    download: true,
   },
   {
-    label: "Fecha de Creación",
+    label: "F. DE CREACION",
+    cssLabel: ["font-bold", "text-sm"],
     property: "auditCreateDate",
+    cssProperty: ["font-semiblod", "text-sm", "text-left"],
     type: "datetime",
-    cssClasses: ["font-medium", "w-10"],
+    sticky: false,
+    sort: true,
+    visible: true,
+    download: true,
   },
   {
-    label: "Estado",
+    label: "ESTADO",
+    cssLabel: ["font-bold", "text-sm"],
     property: "stateCategory",
+    cssProperty: ["font-semiblod", "text-sm", "text-left"],
     type: "badge",
-    cssClasses: ["font-medium", "w-10"],
+    sticky: false,
+    sort: true,
+    visible: true,
+    download: true,
   },
   {
     label: "",
-    property: "menu",
-    type: "buttonGroup",
-    buttonItems: [
-      {
-        buttonLabel: "EDITAR",
-        buttonAction: "edit",
-        buttonCondition: null,
-        disable: false,
-      },
-      {
-        buttonLabel: "ELIMINAR",
-        buttonAction: "remove",
-        buttonCondition: null,
-        disable: false,
-      },
-    ],
-    cssClasses: ["font-medium", "w-10"],
+    cssLabel: [],
+    property: "icEdit",
+    cssProperty: [],
+    type: "icon",
+    action: "edit",
+    sticky: false,
+    sort: false,
+    visible: true,
+    download: false,
+  },
+  {
+    label: "",
+    cssLabel: [],
+    property: "icDelete",
+    cssProperty: [],
+    type: "icon",
+    action: "remove",
+    sticky: false,
+    sort: false,
+    visible: true,
+    download: false,
   },
 ];
 

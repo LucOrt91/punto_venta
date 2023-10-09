@@ -10,6 +10,7 @@ import { map } from "rxjs/operators";
 import { CategoryRequest } from "../requests/category/category.request";
 import { ApiResponse } from "../commons/response.interface";
 import { Category } from "./../responses/category/category.response";
+import { getIcon } from "@shared/functions/helpers";
 
 @Injectable({
   providedIn: "root",
@@ -45,6 +46,13 @@ export class CategoryService {
               e.badgeColor = "text-gray bg-gray-light";
               break;
           }
+          e.icEdit = getIcon("icEdit", "Editar Categoria", true, "edit");
+          e.icDelete = getIcon(
+            "icDelete",
+            "Eliminar Categoria",
+            true,
+            "remove"
+          );
         });
         return data;
       })
@@ -85,7 +93,7 @@ export class CategoryService {
     const requestUrl = `${env.api}${endpoint.CATEGORY_REMOVE}${CategoryId}`;
     return this._http.put(requestUrl, "").pipe(
       map((resp: ApiResponse) => {
-        if (resp.isSucces) {
+        if (resp.isSuccess) {
           this._alert.success("Excelente", resp.message);
         }
       })
